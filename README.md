@@ -2,6 +2,8 @@
 
 This project is a simple project intended to show some basics frontend skills
 
+#### WARNING: If you want to try this app, you need to create and api key from https://rapidapi.com/ricardourdaneta67-5EC8Vcz4unw/api/nike-products/ and past the key inside the .env.
+
 ## What is in the project
 
 -   Use of component to avoid duplicated code
