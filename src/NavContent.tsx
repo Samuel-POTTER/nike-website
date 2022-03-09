@@ -8,17 +8,13 @@ export const NavContent = ({ content }: NavContentProps) => {
     const [isHover, setIsHover] = useState<boolean>(false);
 
     return (
-        <motion.div
-            onHoverStart={() => setIsHover(true)}
-            onHoverEnd={() => setIsHover(false)}
-            className='cursor-pointer relative'
+        <li
+            className='relative cursor-pointer px-2 flex justify-center'
+            onMouseEnter={() => setIsHover(true)}
+            onMouseLeave={() => setIsHover(false)}
         >
-            {content}
-            {isHover ? (
-                <motion.div layoutId='underline' className='absolute inset-x-0 top-8 h-0.5 bg-black' />
-            ) : (
-                <motion.div className='mt-4 h-0.5 ' />
-            )}
-        </motion.div>
+            <p className='mb-4'>{content}</p>
+            {isHover && <motion.div layoutId='underline' className='absolute w-4/5 h-0.5 bottom-0 bg-black' />}
+        </li>
     );
 };
